@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --PrimaryTextColor: #232e35; /* Color ini untuk title dan judul */
+    --SecondaryTextColor: #656d72; /*Color ini untuk text biasa seperti paragraf */
+    --BorderColor: #f1f1f1; 
+    --LineColor: #d9d9d9; /* Color ini untuk line di pre-title*/
+
+    --PrimaryBackgroundColor: #fff;
+    --SecondaryBackgroundColor: #f2f1f1db; 
+    --ThirdBackgroundColor: #e9d59a; 
+
+    --PrimaryIconColor: #7e74f1;
+    --PrimaryIconColorHover: #5d51e8;
+
+    --SectionPadding: 6rem 0;
+    --ItemBorderRadius: 0.7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--PrimaryTextColor);
+}
+
+p {
+    font-size: 1rem; /* 1rem sama dengan 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--SecondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Logo dan Navigasi Menu */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;  
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--PrimaryTextColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--PrimaryTextColor);
+}
+
+/* Buttons Forum */
+
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--BorderColor);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 5px;
+    background: #ffbf00;
+}
+
+/* Buttons Menu */
+
+.btn-logo {
+    padding: 0.5rem 0.5rem;
+    background: #ffbf00;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    border: none;
+}
+
+.btn-logo:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 10px 10px;
+}
+
+.btn-home {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-home:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 5px;
+    background: #ffbf00;
+}
+
+.btn-about {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-about:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 5px;
+    background: #ffbf00;
+}
+
+.btn-materi {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-materi:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 5px;
+    background: #ffbf00;
+}
+
+.btn-team {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-team:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 5px;
+    background: #ffbf00;
+}
+
+/* Titles */
+
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--SecondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--LineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Layout */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Burger Style */
+/* 
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+} */
+
+
+  
+  /* Gaya untuk burger menu pada perangkat seluler */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .line-1,
+  .line-2,
+  .line-3 {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsif untuk perangkat seluler */
+  @media screen and (max-width: 768px) {
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+  
+    .nav.active ul {
+      display: flex;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  
+    .nav li {
+      margin: 10px 0;
+    }
+  
+    .nav button {
+      padding: 8px;
+    }
+  
+    .nav.active .line-1 {
+      transform: translateY(7px) rotate(45deg);
+    }
+  
+    .nav.active .line-2 {
+      opacity: 0;
+    }
+  
+    .nav.active .line-3 {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+/* Hero Section */
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+/*image-networking*/
+
+ .image-networking {
+    width: 90%;
+ }
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-name span {
+    color: #ffbf00;
+}
+
+
+/* Materi Section */
+
+#materies {
+    background-color: var(--SecondaryBackgroundColor);
+    padding: var(--SectionPadding);
+}
+
+.materies .pre-title {
+    margin: 0 auto;
+}
+
+.materies-title {
+    text-align: center;
+}
+
+.materi {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--PrimaryBackgroundColor);
+    border-radius: var(--ItemBorderRadius);
+}
+
+.materi h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.materi-icon {
+    background: var(--ThirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* About Section */
+
+#abouts {
+    background-color: var(--PrimaryBackgroundColor);
+    padding: var(--SectionPadding);
+}
+
+.abouts .pre-title {
+    margin: 0 auto;
+}
+
+.abouts-title {
+    text-align: center;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--PrimaryBackgroundColor);
+    border-radius: var(--ItemBorderRadius);
+}
+
+.about h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+
+
+/* TEAM SECTION */
+
+/* Team Title */
+#teams {
+    background-color: var(--SecondaryBackgroundColor);
+    padding: var(--SectionPadding);
+}
+
+.teams .pre-title {
+    margin: 0 auto;
+}
+
+.teams-title {
+    text-align: center;
+}
+
+
+/* Team member */
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 kolom dengan lebar yang sama */
+    gap: 30px; /* Jarak antar anggota tim */
+  }
+  
+.team-member {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--PrimaryBackgroundColor);
+    border-radius: 360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+.team-member:hover {
+    transform: translateY(-5px);
+    background-color: var(--PrimaryBackgroundColor);
+  }
+  
+.team-member-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+.team-member h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+  }
+  
+.team-member p {
+    font-size: 16px;
+    color: #777;
+    margin: 0;
+  }
+
+
+/* Social Media */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+.social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
+  }
+
+.social-icons img:hover {
+    transform: translateY(-5px);
+    background-color: var(--PrimaryBackgroundColor);
+  }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #f7f8f9;
+    color: #45505b;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+  }
+  
+  #footer h3 {
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  #footer p {
+    font-size: 15;
+    font-style: italic;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  
+  #footer .copyright {
+    margin: 0 0 5px 0;
+  }
+  
+  #footer .credits {
+    font-size: 13px;
+  }
